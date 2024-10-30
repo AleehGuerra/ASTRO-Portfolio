@@ -1,0 +1,35 @@
+---
+console.log('Nav');
+const navItems:object = [
+{
+    title: "Home",
+    label: "home",
+    url:"//",
+},
+{
+    title:"About Me",
+    label:"aboutme",
+    url:"//",
+},
+{
+    title:"Proyects",
+    label:"proyects",
+    url:"//",
+}
+]
+---
+
+<nav class="flex justify-center space-x-5">
+    {
+        navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+
+</nav>
