@@ -1,22 +1,41 @@
----
-import Layout from '../layouts/Layout.astro';
+	---
+	import Layout from '../layouts/Layout.astro';
+	import Badge from '../components/Badge.astro';
+	import SectionContainer from '../components/SectionContainer.astro';
+	import LinkedInIcon from '../components/icons/LinkedIn.astro';
+	import GitHubIcon from '../components/icons/GitHub.astro';
+	import SocialPill from '../components/SocialPill.astro';
+	import MailIcon from '../components/icons/Mail.astro';
+	---
 
----
+	<Layout title="Aleeh's Portfolio">
+		<main >
+			<SectionContainer id="top" class="py-44">	
+			<h1 class="flex justify-center space-x-4 size-fit"> 
+				<img class="rounded-full w-30 h-40" src="src/imgs/perfil.jpeg" alt="mi imagen" />
+				 <span class="text-center text-wrap max-w-md mx-auto">Hola, soy Alejandro <Badge>Disponible para trabajar</Badge>
+				</span>
+				<span class="text-center text-wrap max-w-md mx-auto">Soy un <span class="text-yellow-400 dark:text-yellow-200/90">desarrollador de
+					Software Junior</span>, con habilidades tanto en el Frontend como en el Backend
+					. Me especializo sobretodo en el diseño e implementación de interfaces de usuario</span>
+			
+				</h1>
+				<nav class="flex gap-x-2">
+						<SocialPill href="https://www.linkedin.com/in/eddy-alejandro-guerra-rubio-075224333/">
+							<LinkedInIcon  class="size-6" />
+							LinkedIn
+						</SocialPill>
+						<SocialPill href="https://github.com/AleehGuerra">
+							<GitHubIcon  class="size-6" />
+							GitHub
+						</SocialPill> 
+						<SocialPill href="mailto:aleeguerra@gmail.com">
+							<MailIcon  class="w-6 h-6" />
+							aleehguerra@gmail.com
+						</SocialPill> 
+				</nav>	
+			</SectionContainer>	
+		</main>
+	</Layout>
 
-<Layout title="Aleeh's Portfolio">
-	<main>
-		
-	</main>
-</Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-</style>
