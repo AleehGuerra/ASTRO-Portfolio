@@ -1,0 +1,21 @@
+---
+const PROJECTS = [
+    {
+        title: 'ChaBot GAPID',
+        description: 'ChatBot Inteligente desarrollado para la plataforma de GAPID por CESIM',
+        link: '#',
+        github:'#',
+        image: 'src/imgs/ChatBot.png',
+    }
+]
+---
+
+{
+PROJECTS.map (({title, description, link, github, image}) => (
+<article class="flex flex-col items-start justify-center">
+<h3 class="text-2xl font-semibold text-yellow-400 dark:text-yellow-200/90 mb-2">{title}</h3>
+<p class="text-lg mb-4 text-pretty">{description}</p>
+<img src={image} alt={`Captura de pantalla del proyecto ${image}`} class="w-80 hover:scale-110 transition h-80 rounded-lg shadow-2xl shadow-white/10">
+</article>
+))
+}

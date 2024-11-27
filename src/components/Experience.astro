@@ -1,0 +1,29 @@
+---
+import type { ACTION_ERROR_CODES } from "astro:actions"
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Jefe de Equipo",
+    company: "Bifrost Innovations",
+    description:
+      "Equipo de desarrollo de Software, de origen cubano, fundado por estudiantes universitarios en el 2023.",
+  },
+  {
+    date: "Febrero 2023",
+    title: "Frontend Engineer",
+    company: "CESIM Cuba",
+    description:
+      "Encargado del desarrollo de la interfaz de un ChatBot Inteligente para la plataforma GAPID",
+  },
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">    
+    {EXPERIENCE.map(experience => (
+    <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+    </li>
+    ))}         
+</ol>
+
